@@ -1,0 +1,146 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #000000 ;
+}
+main{
+  height: 100%;
+  width: 100%;
+  /* background-color: rgb(255, 0, 0); */
+}
+.nav{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 15px;
+  background-color: #ff0000;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.75);
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  /* box-shadow: 8px 10px 33px rgba(209, 128, 128, 0.5); */
+}
+h1{
+  color: rgb(255, 255, 255);
+  flex: 50%;
+  margin-left: 5vh;
+  font-family: 'Barlow', sans-serif;
+}
+.input{
+  flex: 60%;
+}
+h1>p{
+  font-size: 1rem;
+}
+
+#serach{
+    display: block;
+    border: none;
+    width: 70%;
+    margin: auto;
+    margin-top: 15px;
+    padding: 15px;
+    font-size: 20px;
+    
+    border-radius: 10px;
+}
+
+#serach:focus{
+    outline: none;
+}
+
+.movie-box{
+  width: 100%;
+  margin-top: 15px;
+  min-height: 100%;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.box{
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 15px;
+  overflow: hidden;
+  /* box-shadow: 0px 15px 10px rgba(61, 60, 60, 0.8); */
+  border-radius: 0px;
+}
+
+.box-img{
+  position: relative;
+  margin: 0px;
+  width: 300px;
+  height: 300px;
+  z-index: 1;
+}
+
+.box-img img{
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.content{
+  z-index: 0;
+  /* display: none; */
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgb(255, 255, 255);
+  border-radius:20px ;
+  transition: 0.5s ease-in-out;
+}
+
+.box:hover .content{
+  z-index: 2;
+  min-width: 100%;
+  height: 290px;
+  bottom: -15px;
+}
+
+.content .title{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 5px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 20px;
+  background: linear-gradient();
+  background: rgb(0,0,0);
+background: linear-gradient(180deg, rgba(0,0,0,0.8435749299719888) 90%, rgba(255,255,255,1) 100%);
+}
+
+h2{
+  font-size: 2rem;
+}
+
+h4{
+  font-size: 2.5rem;
+  color: rgb(255, 192, 46);
+}
+
+.content .overview h3{
+  margin-top: 5px;
+  font-size: 1rem;
+}
+
+.content .overview p{
+  margin: 1px 2px;
+  font-size: 0.9rem;
+  overflow: hidden;
+}
